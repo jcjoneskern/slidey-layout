@@ -10,7 +10,6 @@
   </head>
   <body>
     <nav>
-      <!-- the one/two/three classes are probably optional in the final project, right? they're just being used for bg colors, yeah? -->
       <ul>
         <li class="one" data-panel="one">home</li>
         <li class="two" data-panel="two">about</li>
@@ -18,13 +17,13 @@
       </ul>
     </nav>
     <main>
-      <div data-panel="one" class="one visible">
+      <div data-panel="one" id="one" class="show-left">
         home
       </div>
-      <div data-panel="two" class="two hidden">
+      <div data-panel="two" id="two" class="hide-right">
         about
       </div>
-      <div data-panel="three" class="three hidden">
+      <div data-panel="three" id="three" class="hide-right">
         portfolio
       </div>
     </main>

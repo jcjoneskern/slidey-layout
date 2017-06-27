@@ -16,16 +16,16 @@ div {
   position: absolute;
   z-index: 0;
 }
-div.one {
+div#one {
   z-index: 3;
 }
-.one {
+.one, #one {
   background-color: red;
 }
-.two {
+.two, #two{
   background-color: blue;
 }
-.three {
+.three, #three {
   background-color: yellow;
 }
 ul {
@@ -36,12 +36,22 @@ li {
   display: inline-block;
 }
 
-.hidden {
+.show-right {
+  right: 0;
+  animation: reveal 1s ease;
+}
+.hide-right {
+  right: 0;
   animation: obscure 1s ease;
 }
-.visible {
+
+.show-left {
+  left: 0;
   animation: reveal 1s ease;
-  /*z-index: 2;*/
+}
+.hide-left {
+  left: 0;
+  animation: obscure 1s ease;
 }
 
 @keyframes obscure {

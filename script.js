@@ -8,28 +8,23 @@ $(function() {
     let nav = $(this).attr("data-panel");
     let panel = $("div[data-panel=" + nav + "]");
 
-    if (panel.hasClass("visible")) {
+    if (panel.hasClass("show-left") || panel.hasClass("show-right")) {
       return;
-    } else if (panel.hasClass("hidden")) {
+    } else {
       if (elems.indexOf(nav) > hold) {
-        //slide in from right
         index--;
-        $("div.visible").toggleClass("hidden visible").css("z-index", index).css("left",0);
+        $("div.show-left, div.show-right").attr("class", "hide-left").css("z-index", index);
 
-        index+=2;
-        panel.toggleClass("hidden visible").css("z-index", index).css("right", 0);
+        index += 2;
+        panel.attr("class", "show-right").css("z-index", index).css("z-index", index);
       } else {
-        //slide in from left
         index--;
-        $("div.visible").toggleClass("hidden visible").css("z-index", index).css("right",0);
+        $("div.show-left, div.show-right").attr("class", "hide-right").css("z-index", index);
 
-        index+=2;
-        panel.toggleClass("hidden visible").css("z-index", index).css("left", 0);
+        index +=2;
+        panel.attr("class", "show-left").css("z-index", index);
       }
-
       hold = elems.indexOf(nav);
     }
-
   });
-
 });
