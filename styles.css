@@ -1,63 +1,57 @@
 body {
   margin: 0;
-}
-main {
-
+  font-family: sans-serif;
 }
 nav {
-  background-color: black;
+  background-color: #000;
+  color: #fff;
   padding: 3px;
-  height: 5vh;
+  text-align: center;
+  border-bottom: 4px solid #47e0ff;
 }
-div {
-  height: 93vh;
+section {
   width: 100%;
   display: inline-block;
   position: absolute;
   z-index: 0;
-}
-div#one {
-  z-index: 3;
-}
-.one, #one {
-  background-color: red;
-}
-.two, #two{
-  background-color: blue;
-}
-.three, #three {
-  background-color: yellow;
+  background: #fff;
 }
 ul {
-  padding: 0;
+  padding: 3px 0;
   margin: 0;
 }
 li {
   display: inline-block;
+  background: #a3a3a3;
+  border-radius: 5px;
+  padding: 1px 4px;
+}
+
+#home {
+  z-index: 3;
 }
 
 .show-right {
   right: 0;
-  animation: reveal 1s ease;
+  animation: reveal 500ms;
 }
 .hide-right {
   right: 0;
-  animation: obscure 1s ease;
+  animation: obscure 500ms;
 }
 
 .show-left {
   left: 0;
-  animation: reveal 1s ease;
+  animation: reveal 500ms;
 }
 .hide-left {
   left: 0;
-  animation: obscure 1s ease;
+  animation: obscure 500ms;
 }
 
 @keyframes obscure {
   0% {width: 100%;}
-  99% {width: 0;}
-  100% {display: none;}
+  100% {width: 0}
 }
 
 @keyframes reveal {
